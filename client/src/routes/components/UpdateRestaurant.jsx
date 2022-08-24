@@ -4,7 +4,7 @@ import { useState } from 'react'
 import RestaurantFinder from '../../api/RestaurantFinder';
 import { useNavigate } from "react-router-dom";
 
-export const UpdateRestaurant = ({restaurant}) => {
+const UpdateRestaurant = ({restaurant}) => {
 
 	const {id} = useParams();
 	const [name, setName] = useState(restaurant.name);
@@ -67,3 +67,5 @@ export const UpdateRestaurant = ({restaurant}) => {
 		</div>
 	)
 }
+
+export default UpdateRestaurant;

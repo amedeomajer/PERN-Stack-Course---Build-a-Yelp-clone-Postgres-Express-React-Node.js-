@@ -33,6 +33,10 @@ const RestaurantsList = () => {
 	const handleUpdate = (id) => {
 		navigate(`restaurants/${id}/update`);
 	}
+
+	const handleRestaurantAnchor = (id) => {
+		navigate(`restaurants/${id}`);
+	}
 	return (
 		<div className='list-group'>
 			<table className="table table-dark table-hover">
@@ -51,7 +55,7 @@ const RestaurantsList = () => {
 						restaurants && restaurants.map(restaurant => {
 							return (
 								<tr key={restaurant.id}>
-								<td>{restaurant.name}</td>
+								<td><a onClick={() => handleRestaurantAnchor(restaurant.id)}>{restaurant.name}</a></td>
 								<td>{restaurant.location}</td>
 								<td>{"$".repeat(restaurant.price_range)}</td>
 								<td>{restaurant.rating}</td>
@@ -66,4 +70,4 @@ const RestaurantsList = () => {
 	)
 }
 
-export default RestaurantsList
+export default RestaurantsList;

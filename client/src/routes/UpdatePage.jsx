@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import RestaurantFinder from '../api/RestaurantFinder';
-import { UpdateRestaurant } from './components/UpdateRestaurant';
+import UpdateRestaurant from './components/UpdateRestaurant';
 
 
 const UpdatePage = () => {
